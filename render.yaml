@@ -1,11 +1,10 @@
-- type: web
+services:
+  - type: web
     name: strapi
-    env: node
+    runtime: node
     plan: free
     buildCommand: yarn install && yarn build
     startCommand: yarn start
-    healthCheckPath: /_health
-    autoDeploy: false
     envVars:
       - key: NODE_VERSION
         value: 20
